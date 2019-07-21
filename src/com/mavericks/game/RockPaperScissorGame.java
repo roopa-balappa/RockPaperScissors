@@ -81,7 +81,9 @@ public class RockPaperScissorGame implements IGameCommand {
 						+ computer.getPlayerName() + "."
 						+ computer.getPlayerName() + " "
 						+ configLoader.getLostMsg());
-			} else {
+			}else if(obj instanceof Player){
+				System.out.println(player.getPlayerName() + " "+ configLoader.getLostMsg());
+			}else {
 				System.out.println("Computer" + " beats "
 						+ player.getPlayerName() + "." 
 						+ player.getPlayerName() + " "

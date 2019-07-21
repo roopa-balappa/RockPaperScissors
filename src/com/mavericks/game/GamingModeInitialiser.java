@@ -45,6 +45,7 @@ public class GamingModeInitialiser {
 		case pvsp:
 			System.out.println(configLoader.getValidGameMode2SelectMsg());
 			status = startGamePlayerVSPlayer();
+			return status;
 			
 		// Computer vs Computer
 		case cvsc:
@@ -79,14 +80,14 @@ public class GamingModeInitialiser {
 		
 		Scanner sc = new Scanner(System.in);
 		// capture the player1 option
-		System.out.println(configLoader.getSelectRPSMsg());
+		System.out.println(configLoader.getSelectRPSMsg() + " for player " + player1.getPlayerName());
 		String selectedOptionPlayer1 = sc.next().toUpperCase();
 		
 		// check for valid user input of player1
 		boolean isInput1Valid = GameUtils.isValidOption(selectedOptionPlayer1);
 		if(isInput1Valid){
 			// capture the player1 option
-			System.out.println(configLoader.getSelectRPSMsg());
+			System.out.println(configLoader.getSelectRPSMsg() + " for player " + player2.getPlayerName());
 			String selectedOptionPlayer2 = sc.next().toUpperCase();
 			
 			// check for valid user input of player2
